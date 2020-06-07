@@ -4,12 +4,13 @@
   "port": 5432,
   "username": "postgres",
   "password": "docker",
-  "database": "gostack_gobarber",
+  "database": "postgres",
   "entities": [
-    "./src/models/*.ts"
+    "@modules/users/infra/typeorm/entities/User.ts",
+    "@modules/appointments/infra/typeorm/entities/Appointment.ts"
   ],
   "migrations": [
-    "./src/database/migrations/*.ts"
+    "@shared/infra/typeorm/migrations/*.ts"
   ],
   "cli": {
     "migrationsDir": "./src/database/migrations"
